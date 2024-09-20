@@ -1,0 +1,8 @@
+{
+  "extends": "@umijs/lint/dist/config/stylelint",
+  "rules": {
+    "function-no-unknown": [true, {
+      "ignoreFunctions": ["lighten", "darken", "mix", "adjust-hue", "saturate", "desaturate"]
+    }]
+  }
+}
