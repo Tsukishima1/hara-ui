@@ -20,7 +20,7 @@ import { Input } from 'hara-ui';
 
 ## 示例
 
-<code src="./demo/index.tsx">主要类型</code>
+<code src="./demo/index.tsx">输入框示例</code>
 
 ## 参数
 

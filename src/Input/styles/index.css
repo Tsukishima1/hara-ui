@@ -4,49 +4,47 @@
   position: relative;
   display: block;
   min-width: 300px;
-  padding: .5rem;
-  font-size: .9rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: .4rem
+  border-radius: 0.4rem;
 }
 
 .hara-input:focus {
   outline-color: #e7e9eb;
   outline-width: 4px;
-  box-shadow: 0 0 0 4px var(--hara-input-ring-focus)
+  box-shadow: 0 0 0 3.8px var(--hara-input-ring-focus);
 }
 
-.hara-input[type="file"] {
-  padding: .4rem;
+.hara-input[type='file'] {
+  padding: 0.4rem;
   font-size: 14px;
   outline: none;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.hara-input[type="file"]:focus {
+.hara-input[type='file']:focus {
   outline: none;
-  box-shadow: none
+  box-shadow: none;
 }
 
-.hara-input[type="file"]::-webkit-file-upload-button {
-  border-radius: .2rem;
+.hara-input[type='file']::-webkit-file-upload-button {
+  border-radius: 0.2rem;
   border: none;
-  padding: .2rem .4rem;
-  margin-right: .5rem;
+  padding: 0.2rem 0.4rem;
+  margin-right: 0.5rem;
   background-color: #e7e8ea;
   color: #495057;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .hara-input:disabled {
-  cursor: not-allowed
+  cursor: not-allowed;
 }
 
 .hara-input:disabled::placeholder {
-  color: #adb5bd
+  color: #adb5bd;
 }
-
-/*# sourceMappingURL=./index.css.map */
