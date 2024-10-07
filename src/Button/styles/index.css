@@ -1,3 +1,5 @@
+@import url('./../../variables.css');
+
 .hara-btn {
   font-size: 14px;
   padding: 8px 17px;
@@ -8,7 +10,7 @@
 
 .hara-btn-primary {
   color: #fff;
-  background: #222;
+  background: var(--hara-primary);
 }
 
 .hara-btn-primary:hover {
@@ -17,11 +19,9 @@
 
 .hara-btn-ghost {
   background: transparent;
-  color: #333;
 }
 
 .hara-btn-ghost:hover {
-  color: #222;
   background-color: #eee;
 }
 
