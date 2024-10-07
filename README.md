@@ -3,15 +3,21 @@
 [![NPM version](https://img.shields.io/npm/v/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
 
+文档 🔗：https://hara-ui.vercel.app/
+
 A react library developed with dumi
 
-## Usage
+**此项目作为个人练习的组件库，参考了 [Shadcn-UI](https://ui.shadcn.com) 的设计理念，目前还在开发中... :3**
 
-TODO
+### 目前完成的组件：
 
-## Options
-
-TODO
+- [x] Button
+- [x] Input
+- [ ] Tooltip
+- [ ] Select
+- [ ] Slider
+- [ ] Sonner
+- [ ] ...
 
 ## Development
 
