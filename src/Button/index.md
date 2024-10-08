@@ -18,15 +18,13 @@ import { Button } from 'hara-ui';
 
 ## 示例
 
-<code src="./demo/base.tsx">主要类型</code>
+<code src="./demo/base.tsx">按钮示例</code>
 
 ## 参数
 
-| 参数      | 说明       | 类型                              | 默认值   |
-| --------- | ---------- | --------------------------------- | -------- |
-| type      | 按钮类型   | `"primary" \| "default"`          | `default` |
-| style     | 自定义样式 | `React.CSSProperties`                   | -        |
-| className | 自定义类名 | `string`                          | -        |
-| onClick   | 点击事件   | `(event: React.MouseEvent<HTMLButtonElement>) => void;`          | -        |
-
-
+| 参数      | 说明       | 类型                                                    | 默认值    |
+| --------- | ---------- | ------------------------------------------------------- | --------- |
+| type      | 按钮类型   | `"primary" \| "default"`                                | `default` |
+| style     | 自定义样式 | `React.CSSProperties`                                   | -         |
+| className | 自定义类名 | `string`                                                | -         |
+| onClick   | 点击事件   | `(event: React.MouseEvent<HTMLButtonElement>) => void;` | -         |

@@ -5,7 +5,7 @@ hero:
   actions:
     - text: 开始使用
       link: /guide
-    - text: GitHub
+    - text: 源码地址
       icon: github
       link: https://github.com/Tsukishima1
 features:
