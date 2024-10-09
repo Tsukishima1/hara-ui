@@ -5,19 +5,18 @@ export interface ButtonProps {
   /* 按钮类型 */
   variant?: 'primary' | 'ghost';
   /* 自定义样式 */
-  style?:React.CSSProperties;
+  style?: React.CSSProperties;
   /* 自定义类名 */
   className?: string;
   /* 点击事件 */
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-/** 按钮组件 */
 const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
-  const { variant = 'primary', children, style, onClick } = props
+  const { variant = 'primary', children, style, onClick } = props;
   return (
     <button
-      type='button'
+      type="button"
       className={`hara-btn ${variant ? 'hara-btn-' + variant : ''}`}
       style={style} // 应用自定义样式
       onClick={onClick} // 应用点击事件
