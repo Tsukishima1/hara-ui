@@ -13,11 +13,13 @@ export interface ButtonProps {
 }
 
 const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
-  const { variant = 'primary', children, style, onClick } = props;
+  const { variant = 'primary', children, style, onClick, className } = props;
   return (
     <button
       type="button"
-      className={`hara-btn ${variant ? 'hara-btn-' + variant : ''}`}
+      className={`hara-btn ${variant ? 'hara-btn-' + variant : ''} ${
+        className !== undefined ? className : ''
+      }`}
       style={style} // 应用自定义样式
       onClick={onClick} // 应用点击事件
     >
