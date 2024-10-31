@@ -14,7 +14,7 @@ A react library developed with dumi~ 🔥
 - [x] Button
 - [x] Input
 - [x] Tooltip
-- [ ] Select
+- [x] Select
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...
