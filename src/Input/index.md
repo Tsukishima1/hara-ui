@@ -12,19 +12,27 @@ _该组件封装了原生的`input`标签，提供了更多的样式和功能。
 
 输入框组件用于接收用户输入的文本信息。
 
-## 引用
+## 预览
+
+<code src="./demo/index.tsx">输入框示例</code>
+
+## 使用方法
+
+### 导入
 
 ```jsx | pure
 import { Input } from 'hara-ui';
 ```
 
-## 示例
+### 组件结构
 
-<code src="./demo/index.tsx">输入框示例</code>
+```html | pure
+<input />
+```
 
 ## 参数
 
-| 参数      | 说明       | 类型                  | 默认值 |
-| --------- | ---------- | --------------------- | ------ |
-| style     | 自定义样式 | `React.CSSProperties` | -      |
-| className | 自定义类名 | `string`              | -      |
+| 属性      | 类型                  | 必选 | 默认值 | 描述       |
+| --------- | --------------------- | ---- | ------ | ---------- |
+| style     | `React.CSSProperties` | 否   | -      | 自定义样式 |
+| className | `string`              | 否   | -      | 自定义类名 |

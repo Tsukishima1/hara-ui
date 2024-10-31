@@ -41,15 +41,14 @@ import { Select } from 'hara-ui';
 
 ### SelectProps
 
-| 属性        | 类型                      | 必选 | 描述                           |
-| ----------- | ------------------------- | ---- | ------------------------------ |
-| `value`     | `string`                  | 否   | 选中的值                       |
-| `onChange`  | `(value: string) => void` | 否   | 当选中的值变化时调用的回调函数 |
-| `className` | `string`                  | 否   | Select 组件的附加类名          |
-| `style`     | `React.CSSProperties`     | 否   | Select 组件的内联样式          |
+| 属性        | 类型                      | 必选 | 默认值 | 描述                           |
+| ----------- | ------------------------- | ---- | ------ | ------------------------------ |
+| `onChange`  | `(value: string) => void` | 否   | `-`    | 当选中的值变化时调用的回调函数 |
+| `className` | `string`                  | 否   | `-`    | Select 组件的附加类名          |
+| `style`     | `React.CSSProperties`     | 否   | `-`    | Select 组件的内联样式          |
 
 ### SelectItemProps
 
-| 属性    | 类型     | 必选 | 描述     |
-| ------- | -------- | ---- | -------- |
-| `value` | `string` | 是   | 选项的值 |
+| 属性    | 类型     | 必选 | 默认值 | 描述     |
+| ------- | -------- | ---- | ------ | -------- |
+| `value` | `string` | 是   | `-`    | 选项的值 |
