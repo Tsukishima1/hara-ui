@@ -15,8 +15,8 @@
 
 .hara-input:focus {
   outline-color: #e7e9eb;
-  outline-width: 4px;
-  box-shadow: 0 0 0 3.5px var(--hara-input-ring-focus);
+  outline-width: 2px;
+  box-shadow: 0 0 0 3px var(--hara-input-ring-focus);
 }
 
 .hara-input[type='file'] {

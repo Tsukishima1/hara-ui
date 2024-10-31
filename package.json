@@ -46,11 +46,13 @@
     ]
   },
   "dependencies": {
-    "hara-ui": "file:"
+    "hara-ui": "file:",
+    "lucide-react": "^0.454.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.13",
     "@types/react": "^18.0.0",

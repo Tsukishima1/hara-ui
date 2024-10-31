@@ -6,7 +6,7 @@ export default defineConfig({
   themeConfig: {
     name: 'Hara-UI',
     ...defineThemeConfig({
-      thumbBackground: true
-    })
+      thumbBackground: false,
+    }),
   },
 });
