@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+# 触发条件：当代码被推送到主分支时
+on:
+  push:
+    branches:
+      - main  # 可根据需要更改为你的主分支名称
+
+# 设置运行环境
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码库
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 设置 Node.js 环境
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # 可根据需要调整 Node.js 版本
+
+      # 安装依赖项
+      - name: Install dependencies
+        run: npm install
+
+      # 构建项目
+      - name: Build project
+        run: npm run docs:build
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 Token
+          publish_dir: ./docs-dist  # 根据你的项目构建输出目录调整，比如 React/Vite 项目一般是 `./dist`
