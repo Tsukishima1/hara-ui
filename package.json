@@ -20,8 +20,7 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepublishOnly": "father doctor && npm run build",
     "start": "npm run dev",
-    "test": "jest",
-    "deploy": "gh-pages -d docs-dist"
+    "test": "jest"
   },
   "commitlint": {
     "extends": [
