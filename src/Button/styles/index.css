@@ -1,0 +1,28 @@
+@import url('./../../variables.css');
+
+.hara-btn {
+  font-size: 14px;
+  padding: 8px 17px;
+  border-radius: 6px;
+  transition: all .15s;
+  cursor: pointer;
+}
+
+.hara-btn-primary {
+  color: #fff;
+  background: var(--hara-primary);
+}
+
+.hara-btn-primary:hover {
+  background: #484848;
+}
+
+.hara-btn-ghost {
+  background: transparent;
+}
+
+.hara-btn-ghost:hover {
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=./index.css.map */
