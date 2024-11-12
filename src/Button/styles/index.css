@@ -9,20 +9,20 @@
 }
 
 .hara-btn-primary {
-  color: #fff;
-  background: var(--hara-primary);
+  color: var(--hara-button-text);
+  background: var(--hara-button-bg);
 }
 
 .hara-btn-primary:hover {
-  background: #484848;
+  background: var(--hara-button-hover-bg);
 }
 
 .hara-btn-ghost {
-  background: transparent;
+  background: var(--hara-button-ghost-bg);
 }
 
 .hara-btn-ghost:hover {
-  background-color: #eee;
+  background-color: var(--hara-button-ghost-hover-bg);
 }
 
 /*# sourceMappingURL=./index.css.map */

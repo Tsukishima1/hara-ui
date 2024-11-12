@@ -9,8 +9,8 @@
 .hara-select-trigger {
   width: 100%;
   padding: 8px 12px;
-  background-color: white;
-  border: 1px solid #c0c0c0;
+  background-color: var(--hara-input-bg);
+  border: 1px solid var(--hara-input-border);
   border-radius: 0.4rem;
   cursor: pointer;
   text-align: left;
@@ -18,9 +18,7 @@
 }
 
 .hara-select-trigger.focused {
-  outline-color: transparent;
-  outline-width: 2px;
-  box-shadow: 0 0 0 1px var(--hara-input-ring-focus);
+  box-shadow: 0 0 0 2px var(--hara-input-ring-inset), 0 0 0 4px var(--hara-input-ring);
 }
 
 .hara-select-chevrons {
@@ -34,11 +32,11 @@
 
 .hara-select-content {
   position: absolute;
-  top: 120%;
+  top: 125%;
   left: 0;
   width: 100%;
-  background-color: white;
-  border: 1px solid #dad8d8;
+  background-color: var(--hara-input-bg);
+  border: 1px solid var(--hara-input-border);
   padding: 0.3rem;
   border-radius: 0.4rem;
   max-height: 150px;
@@ -58,11 +56,12 @@
 }
 
 .hara-select-item:hover {
-  background-color: #f0f0f0;
+  background-color: var(--hara-select-item-hover);
+  color: var(--hara-select-item-hover-text);
 }
 
 .hara-select-item.selected {
-  color: black;
+  color: var(--hara-primary);
 }
 
 #select-demo-demo {

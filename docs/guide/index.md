@@ -13,6 +13,8 @@ toc: content
 
 写这个项目的初衷是研究各式各样组件的诞生过程，参考我最喜欢的一个组件库[ShadcnUI](https://ui.shadcn.com)的设计理念，创造一个符合自己审美的组件库！
 
+这是我创建该组件库的一些小心得!! 👉 [组件库搭建小记🐥](https://hara-blog.vercel.app/posts/harauI)
+
 非常感谢你能看到这些话，也感谢你对 HaraUI 的支持——😃
 
 # 立即使用

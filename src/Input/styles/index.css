@@ -7,16 +7,17 @@
   padding: 0.5rem;
   font-size: 0.9rem;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: var(--hara-input-bg);
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1.5px solid var(--hara-input-border);
   border-radius: 0.4rem;
+  outline:none;
+  margin: 4px;
 }
 
 .hara-input:focus {
-  outline-color: #e7e9eb;
-  outline-width: 2px;
-  box-shadow: 0 0 0 3px var(--hara-input-ring-focus);
+  outline:none;
+  box-shadow: 0 0 0 2px var(--hara-input-ring-inset), 0 0 0 4px var(--hara-input-ring);
 }
 
 .hara-input[type='file'] {
@@ -47,5 +48,5 @@
 }
 
 .hara-input:disabled::placeholder {
-  color: #adb5bd;
+  color: var(--hara-input-disabled-placeholder);
 }
