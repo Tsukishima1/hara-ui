@@ -9,7 +9,7 @@ code {
 
 pre.prism-code {
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'JetBrains Mono';
 }
 
@@ -19,4 +19,12 @@ pre.prism-code {
 
 .markdown p {
   font-size: 17px !important;
+}
+
+.css-jhq8qe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }

@@ -8,17 +8,6 @@
       "todos": [
         {
           "type": "Todo",
-          "id": "az_YNswGX-a3#KcXSOzY3CbnkdCne2fF",
-          "text": "type和interface的区别？使用场景？",
-          "date": "12.11.2024",
-          "color": "green",
-          "folderPath": [
-            "面试题"
-          ],
-          "addedToCommitMessage": false
-        },
-        {
-          "type": "Todo",
           "id": "NjZsFjx5uEcGp4M5GakpZHnR9DcN3I_L",
           "text": "useEffect里的return ()=>{}",
           "date": "12.11.2024",
@@ -35,19 +24,7 @@
       "id": "3n6MuwGuB6QZDwfXcB0l7M5Pn-eflrwZ",
       "label": "hara-ui 组件库开发",
       "folders": [],
-      "todos": [
-        {
-          "type": "Todo",
-          "id": "bE5J7#oaW2p4Qne5zF#EIm7u8iJQdriW",
-          "text": "separator 分割线",
-          "date": "12.11.2024",
-          "color": "blue",
-          "folderPath": [
-            "hara-ui 组件库开发"
-          ],
-          "addedToCommitMessage": false
-        }
-      ]
+      "todos": []
     }
   ],
   "terrys-todos.done-todos": [
@@ -55,6 +32,28 @@
       "type": "Todo",
       "id": "B8qGc3JjXphuDHzYJ#UgJqapn#GptIfW",
       "text": "深浅模式切换",
+      "date": "12.11.2024",
+      "color": "blue",
+      "folderPath": [
+        "hara-ui 组件库开发"
+      ],
+      "addedToCommitMessage": false
+    },
+    {
+      "type": "Todo",
+      "id": "az_YNswGX-a3#KcXSOzY3CbnkdCne2fF",
+      "text": "type和interface的区别？使用场景？",
+      "date": "12.11.2024",
+      "color": "green",
+      "folderPath": [
+        "面试题"
+      ],
+      "addedToCommitMessage": false
+    },
+    {
+      "type": "Todo",
+      "id": "bE5J7#oaW2p4Qne5zF#EIm7u8iJQdriW",
+      "text": "separator 分割线",
       "date": "12.11.2024",
       "color": "blue",
       "folderPath": [

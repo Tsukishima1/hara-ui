@@ -3,7 +3,7 @@ import React from 'react';
 
 export default () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+    <>
       <Tooltip content="提示文本" placement="top">
         <Button style={{ backgroundColor: 'whitesmoke', color: 'black' }}>
           top
@@ -24,6 +24,6 @@ export default () => {
           right
         </Button>
       </Tooltip>
-    </div>
+    </>
   );
 };

@@ -1,96 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1731316526704" clover="3.2.0">
-  <project timestamp="1731316526704" name="All files">
-    <metrics statements="67" coveredstatements="67" conditionals="36" coveredconditionals="25" methods="17" coveredmethods="17" elements="120" coveredelements="109" complexity="0" loc="67" ncloc="67" packages="4" files="4" classes="4"/>
+<coverage generated="1732023050469" clover="3.2.0">
+  <project timestamp="1732023050469" name="All files">
+    <metrics statements="73" coveredstatements="6" conditionals="39" coveredconditionals="2" methods="18" coveredmethods="1" elements="130" coveredelements="9" complexity="0" loc="73" ncloc="73" packages="5" files="5" classes="5"/>
     <package name="Button">
-      <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="index.tsx" path="D:\Study\MyProject\hara-ui@latest\src\Button\index.tsx">
-        <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Input">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="index.tsx" path="D:\Study\MyProject\hara-ui@latest\src\Input\index.tsx">
-        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Select">
-      <metrics statements="45" coveredstatements="45" conditionals="26" coveredconditionals="19" methods="12" coveredmethods="12"/>
+      <metrics statements="45" coveredstatements="0" conditionals="26" coveredconditionals="0" methods="12" coveredmethods="0"/>
       <file name="index.tsx" path="D:\Study\MyProject\hara-ui@latest\src\Select\index.tsx">
-        <metrics statements="45" coveredstatements="45" conditionals="26" coveredconditionals="19" methods="12" coveredmethods="12"/>
+        <metrics statements="45" coveredstatements="0" conditionals="26" coveredconditionals="0" methods="12" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="112" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="138" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="140" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="145" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="150" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="152" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="157" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Separator">
+      <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="D:\Study\MyProject\hara-ui@latest\src\Separator\index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="10" type="stmt"/>
-        <line num="47" count="10" type="stmt"/>
-        <line num="48" count="10" type="stmt"/>
-        <line num="49" count="10" type="stmt"/>
-        <line num="50" count="10" type="stmt"/>
-        <line num="54" count="10" type="stmt"/>
-        <line num="55" count="4" type="stmt"/>
-        <line num="58" count="10" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="62" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="65" count="10" type="stmt"/>
-        <line num="66" count="4" type="stmt"/>
-        <line num="67" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="75" count="4" type="stmt"/>
-        <line num="76" count="4" type="stmt"/>
-        <line num="77" count="4" type="stmt"/>
-        <line num="81" count="10" type="stmt"/>
-        <line num="102" count="1" type="stmt"/>
-        <line num="105" count="10" type="stmt"/>
-        <line num="106" count="10" type="stmt"/>
-        <line num="108" count="10" type="stmt"/>
-        <line num="112" count="10" type="cond" truecount="0" falsecount="1"/>
-        <line num="114" count="10" type="stmt"/>
-        <line num="115" count="4" type="stmt"/>
-        <line num="116" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="117" count="4" type="stmt"/>
-        <line num="121" count="10" type="stmt"/>
-        <line num="134" count="1" type="stmt"/>
-        <line num="137" count="10" type="stmt"/>
-        <line num="138" count="10" type="cond" truecount="0" falsecount="1"/>
-        <line num="140" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="145" count="1" type="stmt"/>
-        <line num="149" count="6" type="stmt"/>
-        <line num="150" count="6" type="cond" truecount="0" falsecount="1"/>
-        <line num="152" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="154" count="6" type="stmt"/>
-        <line num="157" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Tooltip">
-      <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="10" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="index.tsx" path="D:\Study\MyProject\hara-ui@latest\src\Tooltip\index.tsx">
-        <metrics statements="10" coveredstatements="10" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="6" type="cond" truecount="0" falsecount="1"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
+        <metrics statements="10" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
   </project>

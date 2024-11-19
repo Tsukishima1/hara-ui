@@ -1,0 +1,16 @@
+.hara-separator-horizontal {
+  height: 1px;
+  margin: 14px 0;
+  width: 100%;
+}
+
+.hara-separator-vertical {
+  height: 100%;
+  margin: 0 14px;
+  width: 1px;
+}
+
+.hara-separator {
+  padding: 0;
+  background-color: var(--hara-separator);
+}
