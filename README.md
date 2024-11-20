@@ -13,10 +13,11 @@ A react library developed with dumi~ 🔥
 
 ### 目前完成的组件：
 
-- [x] Button
-- [x] Input
-- [x] Tooltip
-- [x] Select
+- [x] Button 按钮
+- [x] Input 输入框
+- [x] Tooltip 文字提示
+- [x] Select 选择器
+- [x] Separator 分割线
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...
