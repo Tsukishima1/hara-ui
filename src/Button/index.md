@@ -12,7 +12,7 @@ toc: content
 
 ## 预览
 
-<code src="./demo/base.tsx">按钮示例</code>
+<code src="./demo/base.tsx">Button 示例</code>
 
 ## 使用方法
 

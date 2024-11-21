@@ -14,7 +14,7 @@ toc: content
 
 ## 预览
 
-<code src="./demo/index.tsx">选择器示例</code>
+<code src="./demo/index.tsx">Select 示例</code>
 
 ## 使用方法
 

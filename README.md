@@ -18,6 +18,7 @@ A react library developed with dumi~ 🔥
 - [x] Tooltip 文字提示
 - [x] Select 选择器
 - [x] Separator 分割线
+- [x] Calendar 日历 
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...

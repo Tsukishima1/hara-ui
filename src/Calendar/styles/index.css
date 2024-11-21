@@ -1,0 +1,95 @@
+/* stylelint-disable selector-class-pattern */
+.hara-calendar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  position: relative;
+  padding: 1.2rem;
+  border: solid 1px var(--hara-input-border);
+  border-radius: 12px;
+  background-color: var(--hara-input-bg);
+}
+
+.hara-calendar nav.rdp-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3px;
+}
+
+.hara-calendar nav.rdp-nav>button {
+  background-color: var(--hara-button-ghost-bg);
+  color: var(--hara-button-ghost-text);
+  border: none;
+  border-radius: 6px;
+  width: 25px;
+  height: 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.05s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hara-calendar nav.rdp-nav>button:hover {
+  background-color: var(--hara-button-ghost-hover-bg);
+}
+
+.hara-calendar .hara-calendar-chev {
+  width: 18px;
+  height: 18px;
+  color: rgb(179, 179, 179);
+}
+
+.hara-calendar nav.rdp-nav .rdp-button_previous {
+  left: 0;
+}
+
+.hara-calendar nav.rdp-nav .rdp-button_next {
+  right: 0;
+}
+
+.hara-calendar .rdp-weekday {
+  width: 28px;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: rgb(179, 179, 179)
+}
+
+.hara-calendar .rdp-day_button {
+  font-size: 0.875rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 6px;
+  transition: 0.05 linear;
+  color: var(--hara-button-ghost-text);
+}
+
+.hara-calendar .rdp-day_button:hover {
+  background-color: var(--hara-select-item-hover);
+}
+
+.hara-calendar .rdp-month_caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.hara-calendar [data-outside='true'] .rdp-day_button {
+  color: rgb(179, 179, 179);
+}
+
+.hara-calendar .rdp-selected .rdp-day_button{
+  background-color: var(--hara-primary);
+  color: var(--hara-button-text);
+}
+
+.hara-calendar .rdp-week {
+  margin-top: 5px;
+}

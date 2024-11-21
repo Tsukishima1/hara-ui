@@ -14,7 +14,7 @@ _该组件封装了原生的`input`标签，提供了更多的样式和功能。
 
 ## 预览
 
-<code src="./demo/index.tsx">输入框示例</code>
+<code src="./demo/index.tsx">Input 示例</code>
 
 ## 使用方法
 
