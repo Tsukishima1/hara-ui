@@ -42,7 +42,14 @@
   max-height: 150px;
   overflow-y: auto;
   z-index: 9999;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 5%);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 5%);
+  opacity: 0;
+  transition: opacity 0.05s ease;
+}
+
+/* 打开菜单时的状态 */
+.hara-select-content.open {
+  opacity: 1;
 }
 
 .hara-select-item {

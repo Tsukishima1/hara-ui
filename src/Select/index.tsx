@@ -70,6 +70,12 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
     if (onChange) onChange(val);
   };
 
+  const handleClose = () => {
+    document.getElementById("root")?.style.setProperty("pointer-events", "auto");
+    document.body.style.overflow = "auto";
+    document.body.style.marginRight="0";
+  }
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -79,17 +85,13 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
         !contentRef.contains(event.target as Node)
       ) {
         setIsOpen(false);
-        document.getElementById("root")?.style.setProperty("pointer-events", "auto");
-        document.body.style.overflow = "auto";
-        document.body.style.marginRight="0";
+        handleClose();
       }
     };
 
     const handleWindowBlur = () => {
       setIsOpen(false);
-      document.getElementById("root")?.style.setProperty("pointer-events", "auto");
-      document.body.style.overflow = "auto";
-      document.body.style.marginRight="0";
+      handleClose();
     };
 
     if(isOpen) {
@@ -103,9 +105,7 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       window.addEventListener('blur', handleWindowBlur);
-      document.getElementById("root")?.style.setProperty("pointer-events", "auto");
-      document.body.style.overflow = "auto";
-      document.body.style.marginRight="0";
+      handleClose();
     };
   }, [selectRef, contentRef]);
 
@@ -179,27 +179,33 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const triggerRef = context?.triggerRef;
 
+  const [isVisible, setIsVisible] = useState(false); // 控制是否显示到 DOM
+  const [isAnimating, setIsAnimating] = useState(false); // 控制动画状态
+
   if (!context) throw new Error('SelectContent 必须在 Select 中使用');
 
   useEffect(() => {
-    if (context.isOpen && contentRef.current) {
-      context.setContentRef(contentRef.current);
+    if (context.isOpen) {
+      setIsVisible(true); // 打开时立即显示
+      setTimeout(() => setIsAnimating(true), 0); // 延迟触发动画，确保 `open` 类生效
+    } else {
+      setIsAnimating(false); // 关闭动画开始
+      const timer = setTimeout(() => setIsVisible(false), 50); // 动画结束后卸载
+      return () => clearTimeout(timer);
     }
   }, [context.isOpen]);
 
   let triggerRect = triggerRef?.getBoundingClientRect();
-
-  // 其中 getBoundingClientRect 方法返回的是一个 DOMRect 对象，包含了元素的位置信息，如下：
   let width = triggerRect?.width;
   let height = triggerRect?.height;
   let x = triggerRect?.x;
   let y = (triggerRect?.y ?? 0) + (height ?? 0) + 10;
 
-  return context.isOpen
+  return isVisible
     ? createPortal(
         <div
           ref={contentRef}
-          className="hara-select-content"
+          className={`hara-select-content ${isAnimating ? 'open' : ''}`}
           style={{
             transform: `translate(${x}px, ${y}px)`,
             width: `${width}px`,
@@ -211,6 +217,7 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
       )
     : null;
 };
+
 
 export const SelectItem: React.FC<PropsWithChildren<SelectItemProps>> = ({
   value,
