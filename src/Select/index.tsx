@@ -185,6 +185,7 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
   if (!context) throw new Error('SelectContent 必须在 Select 中使用');
 
   useEffect(() => {
+    if (context.isOpen && contentRef.current) context.setContentRef(contentRef.current);
     if (context.isOpen) {
       setIsVisible(true); // 打开时立即显示
       setTimeout(() => setIsAnimating(true), 0); // 延迟触发动画，确保 `open` 类生效
@@ -201,7 +202,7 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
   let x = triggerRect?.x;
   let y = (triggerRect?.y ?? 0) + (height ?? 0) + 10;
 
-  return isVisible
+  return context.isOpen
     ? createPortal(
         <div
           ref={contentRef}
