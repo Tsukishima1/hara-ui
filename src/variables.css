@@ -6,7 +6,7 @@
   --hara-button-hover-bg: #484848; /* 按钮hover背景颜色 */
   --hara-button-ghost-bg: transparent; /* 按钮幽灵背景颜色 */
   --hara-button-ghost-text: #222; /* 按钮幽灵文字颜色 */
-  --hara-button-ghost-hover-bg: #eee; /* 按钮幽灵hover背景颜色 */
+  --hara-button-ghost-hover-bg: #f4f4f5; /* 按钮幽灵hover背景颜色 */
   --hara-input-bg: #fff; /* 输入框背景颜色 */
   --hara-input-border: #ced4da; /* 输入框边框颜色 */
   --hara-input-ring-inset: var(--hara-input-bg); /* 输入框内环颜色 */
@@ -14,6 +14,7 @@
   --hara-input-disabled-placeholder: #adb5bd; /* 输入框禁用状态placeholder颜色 */
   --hara-select-item-hover: #f0f0f0; /* 下拉框选项hover颜色 */
   --hara-separator: var(--hara-input-border); /* 分割线颜色 */
+  --hara-inner-separator: #f0f0f0; /* 内部分割线颜色 */
 }
 
 /* 暗色模式 */
@@ -23,13 +24,14 @@
   --hara-button-text: #222;
   --hara-button-hover-bg: #d6d6d6;
   --hara-button-ghost-text: #fff;
-  --hara-button-ghost-hover-bg: #484848;
-  --hara-input-bg: rgb(19, 19, 19);
+  --hara-button-ghost-hover-bg: #27272a;
+  --hara-input-bg: #09090b;
   --hara-input-border: #494949;
   --hara-input-ring-inset: var(--hara-input-bg);
-  --hara-input-ring: #d6d6d6;
+  --hara-input-ring: #b0b0b0;
   --hara-input-disabled-placeholder: rgb(62, 62, 62);
   --hara-select-item-hover: #494949;
   --hara-select-item-hover-text: #fff;
   --hara-separator: var(--hara-input-border);
+  --hara-inner-separator: #494949;
 }

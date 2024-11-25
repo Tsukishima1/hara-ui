@@ -4,3 +4,4 @@ export { Select, SelectContent, SelectItem, SelectTrigger } from './Select'; // 
 export { default as Tooltip } from './Tooltip'; // src/Tooltip/index.tsx
 export { default as Separator } from './Separator'; // src/Separator/index.tsx
 export { default as Calendar } from './Calendar'; // src/Calendar/index.tsx
+export { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuLabel } from './DropdownMenu';

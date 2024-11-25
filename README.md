@@ -19,6 +19,7 @@ A react library developed with dumi~ 🔥
 - [x] Select 选择器
 - [x] Separator 分割线
 - [x] Calendar 日历 
+- [x] DropdownMenu 下拉菜单
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...
