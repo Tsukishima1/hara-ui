@@ -32,3 +32,10 @@ pre.prism-code {
 .chakra-stack.chakra-theme-content.css-2eyne7 {
   max-width: 70%;
 }
+
+@media
+  only screen and (max-width: 800px) {
+  .chakra-stack.chakra-theme-content.css-2eyne7 {
+    max-width: 100%;
+  }
+}

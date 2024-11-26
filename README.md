@@ -20,6 +20,7 @@ A react library developed with dumi~ 🔥
 - [x] Separator 分割线
 - [x] Calendar 日历 
 - [x] DropdownMenu 下拉菜单
+- [x] Avatar 头像 
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...
