@@ -2,10 +2,14 @@
 
 .hara-btn {
   font-size: 14px;
-  padding: 8px 17px;
+  padding: 10px 15px;
   border-radius: 6px;
   transition: all .15s;
   cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .hara-btn-primary {
@@ -23,6 +27,50 @@
 
 .hara-btn-ghost:hover {
   background-color: var(--hara-button-ghost-hover-bg);
+}
+
+.hara-btn-outline {
+  background-color: var(--hara-button-ghost-bg);
+  border: 1px solid var(--hara-input-border);
+}
+
+.hara-btn-outline:hover {
+  background-color: var(--hara-button-ghost-hover-bg);
+}
+
+.hara-btn-link {
+  padding: 0;
+  border-radius: 0;
+  transition: 0.05s linear;
+  border-bottom: 1.5px solid transparent;
+}
+
+.hara-btn-link:hover {
+  border-bottom: 1.5px solid var(--hara-primary);
+}
+
+.hara-btn-icon {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.hara-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.hara-btn-sm {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.hara-btn-lg {
+  font-size: 16px;
+  padding: 12px 18px;
 }
 
 /*# sourceMappingURL=./index.css.map */

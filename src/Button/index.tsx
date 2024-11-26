@@ -3,7 +3,9 @@ import React, { type FC, type PropsWithChildren } from 'react';
 import './styles/index.css';
 export interface ButtonProps {
   /* 按钮类型 */
-  variant?: 'primary' | 'ghost';
+  variant?: 'primary' | 'ghost' | 'outline' | 'link';
+  /* 按钮尺寸 */
+  size?: 'sm' | 'md' | 'lg' | 'icon';
   /* 自定义样式 */
   style?: React.CSSProperties;
   /* 自定义类名 */
@@ -13,11 +15,11 @@ export interface ButtonProps {
 }
 
 const Button: FC<PropsWithChildren<ButtonProps>> = (props) => {
-  const { variant = 'primary', children, style, onClick, className } = props;
+  const { variant = 'primary', size = 'md' , children, style, onClick, className } = props;
   return (
     <button
       type="button"
-      className={`hara-btn ${variant ? 'hara-btn-' + variant : ''} ${
+      className={`hara-btn ${variant ? 'hara-btn-' + variant : ''} ${size ? 'hara-btn-' + size : ''} ${
         className !== undefined ? className : ''
       }`}
       style={style} // 应用自定义样式

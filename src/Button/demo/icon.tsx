@@ -1,10 +1,13 @@
 import { Button } from 'hara-ui';
+import { Flame } from 'lucide-react';
 import React from 'react';
 
 export default () => {
   return (
     <>
-      <Button>默认按钮</Button>
+      <Button variant="outline" size="icon">
+        <Flame/>
+      </Button>
     </>
   );
 };

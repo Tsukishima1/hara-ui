@@ -25,14 +25,41 @@ import { Button } from 'hara-ui';
 ### 组件结构
 
 ```html | pure
-<Button>你好</Button>
+<button>你好</button>
 ```
+
+## 按钮类型
+
+### 主要按钮
+
+<code src="./demo/primary"></code>
+
+### 无边框按钮
+
+<code src="./demo/ghost"></code>
+
+### 有边框按钮
+
+<code src="./demo/outline"></code>
+
+### 链接按钮
+
+<code src="./demo/link"></code>
+
+### 图标按钮
+
+<code src="./demo/icon"></code>
+
+### 文字图标一起用
+
+<code src="./demo/withIcon"></code>
 
 ## 参数
 
-| 属性      | 类型                                                    | 必选 | 默认值    | 描述       |
-| --------- | ------------------------------------------------------- | ---- | --------- | ---------- |
-| `variant`   | `"primary" \| "ghost"`                                  | 否   | `primary` | 按钮类型   |
+| 属性        | 类型                                                    | 必选 | 默认值    | 描述       |
+| ----------- | ------------------------------------------------------- | ---- | --------- | ---------- |
+| `variant`   | `"primary" \| "ghost"`                                  | 否   | `"primary"` | 按钮类型   |
+| `size`      | `"sm" \| "md" \| "lg" \| "icon"`                        | 否   | `"md"`      | 按钮大小   |
 | `style`     | `React.CSSProperties`                                   | 否   | -         | 自定义样式 |
 | `className` | `string`                                                | 否   | -         | 自定义类名 |
 | `onClick`   | `(event: React.MouseEvent<HTMLButtonElement>) => void;` | 否   | -         | 点击事件   |
