@@ -1,18 +1,4 @@
----
-title: 深色模式
-toc: content
----
-
-# 深色模式
-
-**Hara-UI** 现在支持深色模式，可以通过 `ThemeProvider` 组件来实现。
-
-## Vite
-
-### 创建组件
-
-```tsx | pure
-// src/components/ThemeProvider.tsx
+"use strict";(self.webpackChunkhara_ui=self.webpackChunkhara_ui||[]).push([[35],{15028:function(o,n,e){e.r(n),e.d(n,{demos:function(){return d}});var r=e(67294),t=e(35325),d={}},44401:function(o,n,e){e.r(n),e.d(n,{demos:function(){return d}});var r=e(67294),t=e(26211),d={}},11171:function(o,n,e){e.r(n),e.d(n,{demos:function(){return d}});var r=e(67294),t=e(68537),d={}},47295:function(o,n,e){e.r(n),e.d(n,{texts:function(){return t}});var r=e(35325);const t=[{value:"Hara-UI",paraId:0,tocIndex:0},{value:" \u73B0\u5728\u652F\u6301\u6DF1\u8272\u6A21\u5F0F\uFF0C\u53EF\u4EE5\u901A\u8FC7 ",paraId:0,tocIndex:0},{value:"ThemeProvider",paraId:0,tocIndex:0},{value:" \u7EC4\u4EF6\u6765\u5B9E\u73B0\u3002",paraId:0,tocIndex:0},{value:`// src/components/ThemeProvider.tsx
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system"; 
@@ -48,7 +34,7 @@ export function ThemeProvider({
   useEffect(() => {
     const root = window.document.documentElement;
 
-    // 根据主题设置 data-theme 属性
+    // \u6839\u636E\u4E3B\u9898\u8BBE\u7F6E data-theme \u5C5E\u6027
     const applyTheme = (currentTheme: Theme) => {
       if (currentTheme === "system") {
         const systemTheme = 
@@ -62,7 +48,7 @@ export function ThemeProvider({
 
     applyTheme(theme);
 
-    // 当系统主题变化时自动更新（仅在系统主题模式下）
+    // \u5F53\u7CFB\u7EDF\u4E3B\u9898\u53D8\u5316\u65F6\u81EA\u52A8\u66F4\u65B0\uFF08\u4EC5\u5728\u7CFB\u7EDF\u4E3B\u9898\u6A21\u5F0F\u4E0B\uFF09
     if (theme === "system") {
       const systemThemeListener = (e: MediaQueryListEvent) => {
         applyTheme(e.matches ? "dark" : "light");
@@ -79,8 +65,8 @@ export function ThemeProvider({
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {
-      localStorage.setItem(storageKey, newTheme); // 保存主题到 localStorage
-      setTheme(newTheme); // 更新主题
+      localStorage.setItem(storageKey, newTheme); // \u4FDD\u5B58\u4E3B\u9898\u5230 localStorage
+      setTheme(newTheme); // \u66F4\u65B0\u4E3B\u9898
     },
   };
 
@@ -91,21 +77,14 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = () => { // 该方法用于获取当前主题，以及切换主题
+export const useTheme = () => { // \u8BE5\u65B9\u6CD5\u7528\u4E8E\u83B7\u53D6\u5F53\u524D\u4E3B\u9898\uFF0C\u4EE5\u53CA\u5207\u6362\u4E3B\u9898
   const context = useContext(ThemeProviderContext);
   if (context === undefined) {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 };
-```
-
-### 添加进根布局
-
-将 `ThemeProvider` 组件添加到根布局中。
-
-```tsx | pure
-// src/App.tsx
+`,paraId:1,tocIndex:2},{value:"\u5C06 ",paraId:2,tocIndex:3},{value:"ThemeProvider",paraId:2,tocIndex:3},{value:" \u7EC4\u4EF6\u6DFB\u52A0\u5230\u6839\u5E03\u5C40\u4E2D\u3002",paraId:2,tocIndex:3},{value:`// src/App.tsx
 import { ThemeProvider } from "./components/ThemeProvider";
 
 function App() {
@@ -119,13 +98,7 @@ function App() {
 }
 
 export default App;
-```
-
-### 添加切换按钮
-
-
-```tsx | pure
-// src/components/ThemeSwitch.tsx
+`,paraId:3,tocIndex:3},{value:`// src/components/ThemeSwitch.tsx
 
 import {
   DropdownMenu,
@@ -142,37 +115,25 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Button>
-          切换深浅主题
+          \u5207\u6362\u6DF1\u6D45\u4E3B\u9898
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          浅色
+          \u6D45\u8272
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          深色
+          \u6DF1\u8272
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          跟随系统
+          \u8DDF\u968F\u7CFB\u7EDF
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
-```
-
-## Next.js
-
-### 安装 next-themes
-  
-  ```bash
-  npm install next-themes
-  ```
-
-### 创建组件
-
-```tsx | pure
-// src/components/ThemeProvider.tsx
+`,paraId:4,tocIndex:4},{value:`npm install next-themes
+`,paraId:5,tocIndex:6},{value:`// src/components/ThemeProvider.tsx
 "use client"
 
 import * as React from "react"
@@ -184,14 +145,7 @@ export function ThemeProvider({
 }: React.ComponentProps<typeof NextThemesProvider>) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
-```
-
-### 添加进根布局
-
-将 `ThemeProvider` 组件添加到根布局中。
-
-```tsx | pure
-// src/pages/_app.tsx
+`,paraId:6,tocIndex:7},{value:"\u5C06 ",paraId:7,tocIndex:8},{value:"ThemeProvider",paraId:7,tocIndex:8},{value:" \u7EC4\u4EF6\u6DFB\u52A0\u5230\u6839\u5E03\u5C40\u4E2D\u3002",paraId:7,tocIndex:8},{value:`// src/pages/_app.tsx
 import { ThemeProvider } from "@/components/theme-provider"
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -213,12 +167,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </>
   )
 }
-```
-
-### 添加切换按钮
-
-```tsx | pure
-// src/components/ThemeSwitch.tsx
+`,paraId:8,tocIndex:8},{value:`// src/components/ThemeSwitch.tsx
 
 "use client"
 
@@ -239,22 +188,24 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Button>
-          切换深浅主题
+          \u5207\u6362\u6DF1\u6D45\u4E3B\u9898
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          浅色
+          \u6D45\u8272
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          深色
+          \u6DF1\u8272
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          跟随系统
+          \u8DDF\u968F\u7CFB\u7EDF
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
 
-```
+`,paraId:9,tocIndex:9}]},9978:function(o,n,e){e.r(n),e.d(n,{texts:function(){return t}});var r=e(26211);const t=[{value:"\u8FD9\u662F\u4E00\u4E2A\u9762\u5411 React \u4F7F\u7528\u7684 UI \u7EC4\u4EF6\u5E93\uFF0C\u5229\u7528 Dumi \u8FDB\u884C\u642D\u5EFA~",paraId:0,tocIndex:1},{value:"\u5199\u8FD9\u4E2A\u9879\u76EE\u7684\u521D\u8877\u662F\u7814\u7A76\u5404\u5F0F\u5404\u6837\u7EC4\u4EF6\u7684\u8BDE\u751F\u8FC7\u7A0B\uFF0C\u53C2\u8003\u6211\u6700\u559C\u6B22\u7684\u4E00\u4E2A\u7EC4\u4EF6\u5E93",paraId:1,tocIndex:1},{value:"ShadcnUI",paraId:1,tocIndex:1},{value:"\u7684\u8BBE\u8BA1\u7406\u5FF5\uFF0C\u521B\u9020\u4E00\u4E2A\u7B26\u5408\u81EA\u5DF1\u5BA1\u7F8E\u7684\u7EC4\u4EF6\u5E93\uFF01",paraId:1,tocIndex:1},{value:"\u8FD9\u662F\u6211\u521B\u5EFA\u8BE5\u7EC4\u4EF6\u5E93\u7684\u4E00\u4E9B\u5C0F\u5FC3\u5F97!! \u{1F449} ",paraId:2,tocIndex:1},{value:"\u7EC4\u4EF6\u5E93\u642D\u5EFA\u5C0F\u8BB0\u{1F425}",paraId:2,tocIndex:1},{value:"\u975E\u5E38\u611F\u8C22\u4F60\u80FD\u770B\u5230\u8FD9\u4E9B\u8BDD\uFF0C\u4E5F\u611F\u8C22\u4F60\u5BF9 HaraUI \u7684\u652F\u6301\u2014\u2014\u{1F603}",paraId:3,tocIndex:1},{value:`npm install hara-ui
+`,paraId:4,tocIndex:3},{value:`import { Button } from 'hara-ui';
+`,paraId:5,tocIndex:4}]},51446:function(o,n,e){e.r(n),e.d(n,{texts:function(){return t}});var r=e(68537);const t=[]}}]);
