@@ -21,6 +21,7 @@ A react library developed with dumi~ 🔥
 - [x] Calendar 日历 
 - [x] DropdownMenu 下拉菜单
 - [x] Avatar 头像 
+- [x] Switch 切换按钮 
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...

@@ -15,6 +15,10 @@
   --hara-select-item-hover: #f0f0f0; /* 下拉框选项hover颜色 */
   --hara-separator: var(--hara-input-border); /* 分割线颜色 */
   --hara-inner-separator: #f0f0f0; /* 内部分割线颜色 */
+  --hara-switch-bg: #dfdfe1; /* 开关背景颜色 */
+  --hara-switch-thumb: #fff; /* 开关滑块颜色 */
+  --hara-switch-checked-bg: var(--hara-primary); /* 开关选中背景颜色 */
+  --hara-switch-disabled-bg: #f0f0f0; /* 开关禁用背景颜色 */
 }
 
 /* 暗色模式 */
@@ -34,4 +38,8 @@
   --hara-select-item-hover-text: #fff;
   --hara-separator: var(--hara-input-border);
   --hara-inner-separator: #494949;
+  --hara-switch-bg: #494949;
+  --hara-switch-thumb: #222;
+  --hara-switch-checked-bg: var(--hara-primary);
+  --hara-switch-disabled-bg: #27272a;
 }

@@ -1,0 +1,39 @@
+.hara-switch {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--hara-switch-bg);
+  width: 2.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5%);
+  transition: all 0.15s ease-in-out;
+}
+
+.hara-switch-thumb {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background-color: var(--hara-switch-thumb);
+  transition: transform 0.15s ease-in-out;
+  pointer-events: none;
+}
+
+.hara-switch[data-state='checked'] {
+  background-color: var(--hara-switch-checked-bg);
+}
+
+.hara-switch[data-state='checked'] .hara-switch-thumb {
+  transform: translateX(1rem);
+}
+
+.hara-switch[data-disabled='true'] {
+  cursor: not-allowed;
+  background-color: var(--hara-switch-disabled-bg);
+}
