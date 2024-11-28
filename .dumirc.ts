@@ -7,7 +7,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
     name: 'Hara-UI',
-    logo: '/favicon.svg',
+    logo: '../favicon.svg',
     ...defineThemeConfig({
       thumbBackground: false,
       brand: baseTheme.colors.blue,

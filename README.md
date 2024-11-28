@@ -22,6 +22,8 @@ A react library developed with dumi~ 🔥
 - [x] DropdownMenu 下拉菜单
 - [x] Avatar 头像 
 - [x] Switch 切换按钮 
+- [x] Checkbox 复选框 
+- [x] RadioGroup 单选按钮组
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...

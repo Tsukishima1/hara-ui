@@ -1,0 +1,41 @@
+.hara-radiogroup {
+  display: grid;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hara-radiogroup-item {
+  display: inline-block;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--hara-primary);
+  background-color: var(--hara-input-bg);
+}
+
+.hara-radiogroup-item[data-checked='true'] {
+  position: relative;
+}
+
+.hara-radiogroup-item[data-checked='true']::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--hara-primary);
+}
+
+.hara-radiogroup-item[data-disabled='true'] {
+  cursor: not-allowed;
+  border-color: var(--hara-input-border);
+}

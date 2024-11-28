@@ -8,3 +8,4 @@ export { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 export { Avatar, AvatarImg, AvatarFallback } from './Avatar'; // src/Avatar/index.tsx
 export { default as Switch } from './Switch'; // src/Switch/index.tsx
 export { default as Checkbox } from './Checkbox'; // src/Checkbox/index.tsx
+export { RadioGroup, RadioGroupItem } from './RadioGroup'; // src/RadioGroup/index.tsx

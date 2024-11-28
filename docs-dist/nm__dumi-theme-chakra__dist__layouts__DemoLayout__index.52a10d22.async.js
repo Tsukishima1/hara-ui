@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkhara_ui=self.webpackChunkhara_ui||[]).push([[242],{70470:function(r,a,u){u.r(a);var t=u(67294),e=u(4681),n=function(){var l=(0,e.pC)();return t.createElement(t.Fragment,null,l)};a.default=n}}]);
