@@ -2,6 +2,8 @@ import { defineConfig } from 'dumi';
 import { defineThemeConfig, baseTheme } from 'dumi-theme-chakra';
 
 export default defineConfig({
+  base: '/hara-ui',
+  publicPath: '/hara-ui/',
   outputPath: 'docs-dist',
   themeConfig: {
     name: 'Hara-UI',
