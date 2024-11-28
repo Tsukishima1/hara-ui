@@ -3,7 +3,7 @@
 .hara-btn {
   font-size: 13px;
   padding: 9px 14px;
-  border-radius: 6px;
+  border-radius: 0.4rem;
   transition: all .15s;
   cursor: pointer;
   display: inline-flex;
