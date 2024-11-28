@@ -1,0 +1,30 @@
+name: Build Docs on Commit
+
+# 定义触发事件
+on:
+  push:
+    branches:
+      - main  # 监听主分支提交，也可以改为其他分支名称
+  pull_request: # 在创建或更新 PR 时也触发（可选）
+    branches:
+      - main
+
+# 定义工作流的任务
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest  # 选择运行环境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # 检出最新的代码
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build documentation
+        run: npm run docs:build  # 执行文档构建命令
