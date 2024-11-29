@@ -1,0 +1,30 @@
+.hara-card {
+  padding: 2rem;
+  border: 1px solid var(--hara-input-border);
+  border-radius: 0.875rem;
+  background-color: var(--hara-input-bg);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 5%);
+}
+
+.hara-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hara-card-header .hara-card-title {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.hara-card-header .hara-card-description {
+  font-size: 0.875rem;
+  color: var(--hara-text-secondary);
+}
+
+.hara-card-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}

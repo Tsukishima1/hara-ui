@@ -24,6 +24,7 @@ A react library developed with dumi~ 🔥
 - [x] Switch 切换按钮 
 - [x] Checkbox 复选框 
 - [x] RadioGroup 单选按钮组
+- [x] Card 卡片 
 - [ ] Slider
 - [ ] Sonner
 - [ ] ...

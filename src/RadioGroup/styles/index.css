@@ -14,7 +14,7 @@ label {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 1.5px solid var(--hara-primary);
+  border: 2px solid var(--hara-primary);
   background-color: var(--hara-input-bg);
 }
 

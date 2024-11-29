@@ -9,3 +9,4 @@ export { Avatar, AvatarImg, AvatarFallback } from './Avatar'; // src/Avatar/inde
 export { default as Switch } from './Switch'; // src/Switch/index.tsx
 export { default as Checkbox } from './Checkbox'; // src/Checkbox/index.tsx
 export { RadioGroup, RadioGroupItem } from './RadioGroup'; // src/RadioGroup/index.tsx
+export { Card, CardHeader, CardTitle, CardDescription, CardFooter, CardContent } from './Card'; // src/Card/index.tsx

@@ -1,6 +1,7 @@
 /* 亮色模式 */
 :root {
   --hara-primary: #222; /* 主题颜色 */
+  --hara-text-secondary: #718096; /* 次要文字颜色 */
   --hara-button-bg: var(--hara-primary); /* 按钮背景颜色 */
   --hara-button-text: #fff; /* 按钮文字颜色 */
   --hara-button-hover-bg: #484848; /* 按钮hover背景颜色 */

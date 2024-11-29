@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Check, ChevronsUpDown } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import React, {
   createContext,
   PropsWithChildren,
@@ -167,7 +167,7 @@ export const SelectTrigger: React.FC<{ children: React.ReactNode }> = ({
       ref={triggerRef}
     >
       {context.selectedLabel || children}
-      <ChevronsUpDown size={14} className="hara-select-chevrons" />
+      <ChevronDown size={14} className="hara-select-chevrons" />
     </button>
   );
 };
