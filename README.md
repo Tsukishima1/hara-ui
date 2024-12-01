@@ -3,13 +3,13 @@
 [![NPM version](https://img.shields.io/npm/v/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
 
-文档 🔗：https://hara-ui.vercel.app/
+文档 🔗：https://tsukishima1.github.io/hara-ui/
 
 A react library developed with dumi~ 🔥
 
 **此项目作为个人练习的组件库，参考了 [Shadcn-UI](https://ui.shadcn.com) 的设计理念，目前还在开发中... :3**
 
-目前支持**暗色主题**！
+支持切换**暗色主题**！
 
 ### 目前完成的组件：
 

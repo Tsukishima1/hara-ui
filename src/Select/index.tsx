@@ -11,13 +11,19 @@ import React, {
 import { createPortal } from 'react-dom';
 import './styles/index.css';
 
-interface SelectProps {
-  /* 选择后的回调函数 */
-  onChange?: (value: string) => void;
+interface CommonProps {
   /* 自定义类名 */
   className?: string;
   /* 自定义样式 */
   style?: React.CSSProperties;
+}
+
+interface SelectProps extends CommonProps{
+  value?: string;
+  defaultValue?: string;
+
+  /* 选择后的回调函数 */
+  onValueChange?: (value: string) => void;
 }
 
 interface SelectItemProps {
@@ -48,7 +54,8 @@ interface SelectContextProps {
 const SelectContext = createContext<SelectContextProps | undefined>(undefined);
 
 export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
-  const { children, className, style, onChange } = props;
+  const { children, className, style, onValueChange, value, defaultValue } =
+    props;
 
   const selectRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -59,22 +66,34 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
   const [triggerRef, setTriggerRef] = useState<HTMLButtonElement | null>(null);
   const [contentRef, setContentRef] = useState<HTMLDivElement | null>(null);
 
+  const isControlled = value !== undefined;
+
+  useEffect(() => {
+    if (isControlled) {
+      setSelectedValue(value);
+    }
+  }, [value]);
+
   const toggleOpen = () => {
     setIsOpen((prev) => !prev);
   };
 
   const handleSelect = (val: string, label: React.ReactNode) => {
-    setSelectedValue(val);
-    setSelectedLabel(label);
+    if (!isControlled) {
+      setSelectedValue(val);
+      setSelectedLabel(label);
+    }
     setIsOpen(false);
-    if (onChange) onChange(val);
+    if (onValueChange) onValueChange(val);
   };
 
   const handleClose = () => {
-    document.getElementById("root")?.style.setProperty("pointer-events", "auto");
-    document.body.style.overflow = "auto";
-    document.body.style.marginRight="0";
-  }
+    document
+      .getElementById('root')
+      ?.style.setProperty('pointer-events', 'auto');
+    document.body.style.overflow = 'auto';
+    document.body.style.marginRight = '0';
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -94,10 +113,12 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
       handleClose();
     };
 
-    if(isOpen) {
-      document.getElementById("root")?.style.setProperty("pointer-events", "none");
-      document.body.style.overflow = "hidden";
-      document.body.style.marginRight = "15px";
+    if (isOpen) {
+      document
+        .getElementById('root')
+        ?.style.setProperty('pointer-events', 'none');
+      document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = '15px';
     }
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -134,7 +155,9 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
   );
 };
 
-export const SelectTrigger: React.FC<{ children: React.ReactNode }> = ({
+export const SelectTrigger: React.FC<PropsWithChildren<CommonProps>> = ({
+  style,
+  className,
   children,
 }) => {
   const context = useContext(SelectContext);
@@ -142,7 +165,8 @@ export const SelectTrigger: React.FC<{ children: React.ReactNode }> = ({
 
   const triggerClassName = `hara-select-trigger ${
     context?.isOpen ? 'focused' : ''
-  }`;
+  } ${className ?? ''}
+  `;
 
   if (!context) throw new Error('SelectTrigger 必须在 Select 中使用');
 
@@ -163,6 +187,7 @@ export const SelectTrigger: React.FC<{ children: React.ReactNode }> = ({
     <button
       type="button"
       className={triggerClassName}
+      style={style}
       onClick={handleClick}
       ref={triggerRef}
     >
@@ -172,27 +197,29 @@ export const SelectTrigger: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
+export const SelectContent: React.FC<PropsWithChildren<CommonProps>> = ({
   children,
+  className,
+  style,
 }) => {
   const context = useContext(SelectContext);
   const contentRef = useRef<HTMLDivElement>(null);
   const triggerRef = context?.triggerRef;
 
   const [isVisible, setIsVisible] = useState(false); // 控制是否显示到 DOM
-  const [isAnimating, setIsAnimating] = useState(false); // 控制动画状态
 
   if (!context) throw new Error('SelectContent 必须在 Select 中使用');
 
   useEffect(() => {
-    if (context.isOpen && contentRef.current) context.setContentRef(contentRef.current);
+    if (context.isOpen && contentRef.current)
+      context.setContentRef(contentRef.current);
+    // 延迟显示，等待 triggerRef 设置完成
     if (context.isOpen) {
-      setIsVisible(true); // 打开时立即显示
-      setTimeout(() => setIsAnimating(true), 0); // 延迟触发动画，确保 `open` 类生效
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 50);
     } else {
-      setIsAnimating(false); // 关闭动画开始
-      const timer = setTimeout(() => setIsVisible(false), 50); // 动画结束后卸载
-      return () => clearTimeout(timer);
+      setIsVisible(false);
     }
   }, [context.isOpen]);
 
@@ -206,10 +233,13 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
     ? createPortal(
         <div
           ref={contentRef}
-          className={`hara-select-content ${isAnimating ? 'open' : ''}`}
+          className={`hara-select-content ${isVisible ? 'visible' : ''} ${
+            className ?? ''
+          }`}
           style={{
             transform: `translate(${x}px, ${y}px)`,
             width: `${width}px`,
+            ...style,
           }}
         >
           {children}
@@ -218,7 +248,6 @@ export const SelectContent: React.FC<{ children: React.ReactNode }> = ({
       )
     : null;
 };
-
 
 export const SelectItem: React.FC<PropsWithChildren<SelectItemProps>> = ({
   value,
@@ -234,13 +263,17 @@ export const SelectItem: React.FC<PropsWithChildren<SelectItemProps>> = ({
       className={`hara-select-item ${isSelected ? 'selected' : ''}`}
       onClick={() => {
         context.onSelect(value, children);
-        document.getElementById("root")?.style.setProperty("pointer-events", "auto");
-        document.body.style.overflow = "auto";
-        document.body.style.marginRight="0";
+        document
+          .getElementById('root')
+          ?.style.setProperty('pointer-events', 'auto');
+        document.body.style.overflow = 'auto';
+        document.body.style.marginRight = '0';
       }}
     >
       {children}
-      {isSelected && <Check size={14} />}
+      {isSelected && (
+        <Check size={14} style={{ marginLeft: '5px', textAlign: 'end' }} />
+      )}
     </div>
   );
 };

@@ -6,6 +6,7 @@
   height: 100%;
   position: relative;
   padding: 1.2rem;
+  padding-top: 1.6rem;
   border: solid 1px var(--hara-input-border);
   border-radius: 12px;
   background-color: var(--hara-input-bg);
@@ -13,17 +14,19 @@
 }
 
 .hara-calendar nav.rdp-nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3px;
+  position: absolute;
+  width: 100%;
 }
 
 .hara-calendar nav.rdp-nav>button {
   background-color: var(--hara-button-ghost-bg);
   color: var(--hara-button-ghost-text);
   border: none;
+  border: 1px solid var(--hara-button-ghost-hover-bg);
   border-radius: 6px;
   width: 25px;
   height: 25px;
@@ -77,6 +80,10 @@
   background-color: var(--hara-select-item-hover);
 }
 
+.hara-calendar .rdp-months {
+  position: relative;
+}
+
 .hara-calendar .rdp-month_caption {
   display: flex;
   justify-content: center;
@@ -84,6 +91,7 @@
   margin-bottom: 14px;
   font-size: 0.9rem;
   font-weight: bold;
+  height: 25px;
 }
 
 .hara-calendar [data-outside='true'] .rdp-day_button {
@@ -121,5 +129,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+}
+
+.rdp-dropdowns .hara-select-trigger>svg {
+  display:none;
 }

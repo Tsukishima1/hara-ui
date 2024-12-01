@@ -42,7 +42,7 @@
     test('能够成功选择一个选项', () => {
       const handleChange = jest.fn();
       const { getByText } = render(
-        <Select onChange={handleChange}>
+        <Select onValueChange={handleChange}>
           <SelectTrigger>Select an option</SelectTrigger>
           <SelectContent>
             <SelectItem value="1">Option 1</SelectItem>

@@ -34,22 +34,41 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: fit-content;
   background-color: var(--hara-input-bg);
   border: 1px solid var(--hara-input-border);
   padding: 0.3rem;
   border-radius: 0.4rem;
-  max-height: 150px;
   overflow-y: auto;
   z-index: 9999;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 5%);
-  opacity: 0;
-  transition: opacity 0.05s ease;
+  opacity: 1;
+  height: fit-content;
+  max-height: 350px;
+  min-width: fit-content;
+  display: none;
 }
 
-/* 打开菜单时的状态 */
-.hara-select-content.open {
-  opacity: 1;
+.hara-select-content.visible {
+  display: block;
+}
+
+/* 改动滚动条样式 */
+.hara-select-content::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+  margin-right: 5px;
+}
+
+.hara-select-content::-webkit-scrollbar-thumb {
+  background-color: var(--hara-select-item-hover);
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.hara-select-content::-webkit-scrollbar-track {
+  background-color: var(--hara-input-bg);
+  margin-right: 5px;
 }
 
 .hara-select-item {

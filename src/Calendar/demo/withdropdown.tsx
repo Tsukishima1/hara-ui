@@ -11,6 +11,8 @@ export default () => {
         selected={date}
         onSelect={setDate}
         withDropdown={true}
+        startMonth={new Date(2004, 2)}
+        endMonth={new Date(2026, 6)}
       />
       <p style={{ width: '100%', textAlign: 'center', marginTop: '10px' }}>
         您选择的日期：{date?.toLocaleDateString()}
