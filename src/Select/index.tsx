@@ -95,6 +95,29 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
     document.body.style.marginRight = '0';
   };
 
+  const getScrollbarWidth = () => {
+    // 创建一个隐藏的 div 元素
+    const scrollDiv = document.createElement('div');
+    scrollDiv.style.visibility = 'hidden';
+    scrollDiv.style.overflow = 'scroll'; // 强制显示滚动条
+    scrollDiv.style.width = '50px';
+    scrollDiv.style.height = '50px';
+    document.body.appendChild(scrollDiv);
+
+    // 创建一个子 div 元素
+    const innerDiv = document.createElement('div');
+    innerDiv.style.width = '100%';
+    scrollDiv.appendChild(innerDiv);
+
+    // 计算滚动条宽度
+    const scrollbarWidth = scrollDiv.offsetWidth - innerDiv.offsetWidth;
+
+    // 移除创建的 div 元素
+    document.body.removeChild(scrollDiv);
+
+    return scrollbarWidth;
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -114,11 +137,10 @@ export const Select: React.FC<PropsWithChildren<SelectProps>> = (props) => {
     };
 
     if (isOpen) {
-      document
-        .getElementById('root')
-        ?.style.setProperty('pointer-events', 'none');
-      document.body.style.overflow = 'hidden';
-      document.body.style.marginRight = '15px';
+      const scrollbarWidth = getScrollbarWidth();
+      document.getElementById("root")?.style.setProperty("pointer-events", "none");
+      document.body.style.overflow = "hidden";
+      document.body.style.marginRight = `${scrollbarWidth}px`;
     }
 
     document.addEventListener('mousedown', handleClickOutside);
