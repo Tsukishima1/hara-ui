@@ -1,7 +1,7 @@
 # hara-ui ✨
 
 [![NPM version](https://img.shields.io/npm/v/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
+[![NPM downloads](http://img.shields.io/npm/dt/hara-ui.svg?style=flat)](https://npmjs.org/package/hara-ui)
 
 文档 🔗：https://tsukishima1.github.io/hara-ui/
 
